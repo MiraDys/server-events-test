@@ -1,10 +1,27 @@
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 import asyncio
 import json
 import random
 
 app = FastAPI()
+
+# CORS policy for local development
+origins = [
+    "http://localhost:5173",  # Vite default port
+    "http://localhost:3000",  # NextJS default port
+    # You can add other origins here, like production URLs
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allow requests from these origins
+    allow_credentials=True,  # Allow cookies or credentials if needed
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    # Allow all headers (custom headers like Authorization)
+    allow_headers=["*"],
+)
 
 # Simulated match data
 match_data = {

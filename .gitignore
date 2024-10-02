@@ -1,4 +1,44 @@
-venv
-venv/*
-__pycache__
-__pycache__/*
+# Ignore Python files
+/backend/__pycache__/
+/backend/*.py[cod]
+/backend/*.pyo
+/backend/*.pyd
+
+# Ignore Python virtual environment
+/backend/venv/
+/backend/venv/*
+
+# Ignore logs, databases, etc.
+/backend/*.log
+/backend/*.sqlite3
+/backend/*.db
+/backend/*.sql
+
+# Ignore Next.js build files
+/frontend/.next/
+/frontend/.next/*
+/frontend/out/
+/frontend/.env.local
+
+# Ignore node_modules for frontend
+/frontend/node_modules/
+/frontend/node_modules/*
+
+# Ignore build artifacts
+/frontend/build/
+/frontend/build/*
+
+# Ignore package lock files
+/frontend/package-lock.json
+/frontend/yarn.lock
+
+# Ignore environment files
+/backend/.env
+/frontend/.env
+
+# Ignore miscellaneous
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

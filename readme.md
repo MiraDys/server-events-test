@@ -1,19 +1,48 @@
-# SSE Test Backend
+# Server Events Test MONOREPO
 
-A simple backend for testing SSE functionality.  
-Script simulates a football match and sends live updates to the client.
+This is a monorepo for testing server-sent events functionality.
 
-## Requirements
+- SSE streaming
+- Websocket
 
-Python 3.10+  
-FastAPI  
-Uvicorn
+TODO:
 
-## Usage
+- [] add tests
+- [] dockerize
+- [] host
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the backend: `python backend.py`
-3. Open the frontend in a browser: `http://localhost:8000/api/v1/live-updates`
+## Backend Requirements
+
+- Python 3.10+
+- FastAPI
+- Uvicorn
+- Uvicorn[standard]
+
+## Frontend Requirements
+
+- node 20+
+- npm 10+
+
+## Use locally
+
+1. Clone the repo
+   git clone https://github.com/MiraDys/server-events-test.git
+
+2. Install Frontend dependency  
+   `cd server-events-frontend`  
+   `npm install`  
+   `npm run dev`
+
+3. Install Backend dependency  
+   `cd backend`  
+   `pip install -r requirements.txt`
+
+4. Run the backend  
+   `python sse-backend.py`  
+   `python websocket-backend.py`
+
+5. Open the frontend in a browser
+   http://localhost:3000/
 
 ## License
 
